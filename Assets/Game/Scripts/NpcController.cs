@@ -41,6 +41,14 @@ public class NpcController : MonoBehaviour
             if (helped)
             {
                 Debug.Log("The Box has been helped!");
+                var questItem = startBlock.block.GetFlowchart().GetStringVariable("QuestItem");
+                var pc = source.GetComponent<PlayerController>();
+                var questItemFound = pc.HasItem(questItem);
+                if (questItemFound)
+                {
+                    startBlock.block.GetFlowchart().SetBooleanVariable("QuestItemFound", true);
+                    pc.RemoveItem(questItem);
+                }
             }
         }
     }

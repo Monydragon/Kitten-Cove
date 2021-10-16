@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7018129329155266432}
   m_Layer: 0
   m_Name: MMC Main Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,6 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   anim: {fileID: 0}
+  isInteracting: 0
+  inventory: []
 --- !u!58 &4830998349527856916
 CircleCollider2D:
   m_ObjectHideFlags: 0
